@@ -1,0 +1,29 @@
+public static void countProgram() {
+String line = "пе тттт еер";
+String[] res = line.split(" ");
+String longestUniqueWord = "";
+int k = 1000;
+
+for (int i = 0; i < res.length; i++) {
+int chet = 0;
+
+for (int j = 0; j < res[i].length(); j++) {
+for (int p = j + 1; p < res[i].length(); p++) {
+if (res[i].charAt(j) == res[i].charAt(p)) {
+chet++;
+break;
+}
+}
+}
+
+int charCount = res[i].length() - chet;
+System.out.println(charCount);
+
+if (charCount < k) {
+k = charCount;
+longestUniqueWord = res[i];
+}
+}
+
+System.out.println(longestUniqueWord);
+}

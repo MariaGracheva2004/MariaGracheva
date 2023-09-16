@@ -1,0 +1,16 @@
+public class Main
+{
+    public static void main(String[] args)
+    {
+        String b = "o44an1jn";
+        int num;
+        if (b.length()%2==0)
+        {
+            num=b.length()/2;
+
+            System.out.println( b.charAt(num-1));
+            System.out.println( b.charAt(num));
+        }
+
+    }
+}
